@@ -36,10 +36,6 @@ export const FutureVision = () => {
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-full text-secondary-foreground text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-            Expanding Horizons
-          </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             The <span className="text-gradient-primary">Future</span> of SparrowG
           </h2>

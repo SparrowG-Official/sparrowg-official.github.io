@@ -4,6 +4,7 @@ import { ServicesSlider } from "@/components/ServicesSlider";
 import { WhySparrowG } from "@/components/WhySparrowG";
 import { TargetAudience } from "@/components/TargetAudience";
 import { FutureVision } from "@/components/FutureVision";
+import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
         <WhySparrowG />
         <TargetAudience />
         <FutureVision />
+        <ContactSection />
       </main>
       <Footer />
     </div>

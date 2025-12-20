@@ -1,0 +1,27 @@
+name: sparrowg-learning
+region: nyc
+
+# Static site component
+static_sites:
+  - name: web
+    github:
+      branch: main
+      deploy_on_push: true
+    build_command: npm run build
+    output_dir: dist
+    catchall_document: index.html
+    routes:
+      - path: /
+
+# Serverless functions
+functions:
+  - name: contact
+    github:
+      branch: main
+      deploy_on_push: true
+    source_dir: api
+    runtime: nodejs20
+    envs:
+      - key: RESEND_API_KEY
+        scope: RUN_TIME
+        type: SECRET
