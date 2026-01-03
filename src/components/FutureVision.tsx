@@ -10,21 +10,21 @@ const visions = [
   },
   {
     icon: Pencil,
-    title: "STEM Stationery",
-    description: "Creative learning tools and educational supplies",
+    title: "AR/VR Learning",
+    description: "Immersive augmented and virtual reality experiences for interactive STEM education",
     status: "In Development",
   },
   {
     icon: Shirt,
-    title: "Clothing & Merch",
-    description: "Express your love for science with our STEM-themed apparel",
-    status: "Coming 2025",
+    title: "Tech Ecosystem",
+    description: "A platform connecting students, educators, and parents for collaborative learning",
+    status: "Coming Soon",
   },
   {
     icon: Users,
     title: "Learning Communities",
     description: "Connect with fellow STEM enthusiasts and educators worldwide",
-    status: "Coming 2025",
+    status: "Coming Soon",
   },
 ];
 
@@ -37,7 +37,7 @@ export const FutureVision = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            The <span className="text-gradient-primary">Future</span> of SparrowG
+            The <span className="text-gradient-primary">Future</span> with SparrowG
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our vision extends beyond kits. We're building a complete ecosystem for STEM learning.

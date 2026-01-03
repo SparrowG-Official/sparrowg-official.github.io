@@ -1,60 +1,29 @@
-import heroIllustration from "@/assets/hero-illustration.png";
-
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden stem-pattern">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src="/images/DSC00817.JPG"
+          alt="Kids learning with curiosity and engagement"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/50" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-up">
+        <div className="flex items-center justify-center min-h-[80vh]">
+          {/* Centered Content */}
+          <div className="space-y-8 text-center max-w-4xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-up text-white drop-shadow-lg">
               Learning That{" "}
               <span className="text-gradient-primary">Takes Flight</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed animate-fade-up drop-shadow-md" style={{ animationDelay: "0.1s" }}>
               Creating impactful learning experiences through hands-on kits, immersive AR/VR, and expert-led workshops for individuals and organizations.
             </p>
-          </div>
-
-          {/* Right Illustration */}
-          <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
-              <img
-                src={heroIllustration}
-                alt="SparrowG STEM Learning - Kids exploring science, technology, engineering and mathematics with interactive kits"
-                className="w-full h-auto rounded-3xl animate-float"
-              />
-              {/* Floating accent cards */}
-              <div className="absolute -left-4 top-1/4 bg-card rounded-2xl p-4 shadow-elevated animate-float" style={{ animationDelay: "1s" }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-science/20 flex items-center justify-center">
-                    <span className="text-lg">🔬</span>
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold">Science</div>
-                    <div className="text-xs text-muted-foreground">Explore & Discover</div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -right-4 bottom-1/4 bg-card rounded-2xl p-4 shadow-elevated animate-float" style={{ animationDelay: "2s" }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-technology/20 flex items-center justify-center">
-                    <span className="text-lg">💻</span>
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold">Technology</div>
-                    <div className="text-xs text-muted-foreground">Build & Code</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
