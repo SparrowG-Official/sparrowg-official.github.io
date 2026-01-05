@@ -57,18 +57,22 @@ export const FeaturedProducts = () => {
   const visibleProducts = products.slice(startIndex, startIndex + visibleCount);
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="section-padding bg-background relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 stem-pattern opacity-20 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-center mb-4">
-          <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
             Featured
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12">
+          <h2 className="section-title mb-6">
             Creative <span className="text-gradient-primary">Learning Kits</span>
           </h2>
+          <p className="section-subtitle">
+            Explore our best-selling educational kits designed to inspire creativity
+          </p>
         </div>
 
         {/* Products Grid */}
@@ -78,14 +82,14 @@ export const FeaturedProducts = () => {
             <>
               <button
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-10 h-10 rounded-full bg-card shadow-lg flex items-center justify-center text-foreground hover:bg-accent transition-colors"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-6 z-20 w-12 h-12 rounded-full bg-card shadow-card flex items-center justify-center text-foreground hover:bg-accent hover:scale-110 transition-all duration-300"
                 aria-label="Previous products"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-10 h-10 rounded-full bg-card shadow-lg flex items-center justify-center text-foreground hover:bg-accent transition-colors"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-6 z-20 w-12 h-12 rounded-full bg-card shadow-card flex items-center justify-center text-foreground hover:bg-accent hover:scale-110 transition-all duration-300"
                 aria-label="Next products"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -93,15 +97,15 @@ export const FeaturedProducts = () => {
             </>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {visibleProducts.map((product) => (
               <Card
                 key={product.id}
-                className="group overflow-hidden hover:shadow-elevated transition-all duration-300"
+                className="group overflow-hidden hover-lift bg-card"
               >
                 <div className="relative aspect-square overflow-hidden bg-muted">
                   {/* Discount Badge */}
-                  <div className="absolute top-3 left-3 z-10 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                  <div className="absolute top-4 left-4 z-10 bg-destructive text-destructive-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                     {product.discount}
                   </div>
 
@@ -110,15 +114,18 @@ export const FeaturedProducts = () => {
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
-                <CardContent className="p-4">
-                  <h3 className="text-sm font-semibold text-foreground mb-2 uppercase tracking-wide">
+                <CardContent className="p-5 lg:p-6">
+                  <h3 className="text-sm lg:text-base font-bold text-foreground mb-3 uppercase tracking-wide line-clamp-2">
                     {product.name}
                   </h3>
 
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-lg font-bold text-foreground">
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg lg:text-xl font-bold text-foreground">
                       {product.price}
                     </span>
                     <span className="text-sm text-muted-foreground line-through">
@@ -132,13 +139,13 @@ export const FeaturedProducts = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 lg:mt-16">
           <Button
             variant="outline"
             size="lg"
-            className="rounded-full px-8"
+            className="rounded-full px-10 hover-lift"
           >
-            View All
+            View All Products
           </Button>
         </div>
       </div>

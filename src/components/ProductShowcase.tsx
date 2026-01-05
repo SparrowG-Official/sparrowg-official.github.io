@@ -52,16 +52,20 @@ export const ProductShowcase = () => {
   };
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="section-padding bg-background relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 stem-pattern opacity-30 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
+            Real Learning in Action
+          </p>
+          <h2 className="section-title mb-6">
             Our <span className="text-gradient-primary">Kits</span> in Action
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-subtitle">
             See how students engage with hands-on STEM learning through our innovative kits and workshops
           </p>
         </div>
@@ -69,16 +73,16 @@ export const ProductShowcase = () => {
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
           {/* Large Image Display */}
-          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-elevated group">
+          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-elevated group">
             <img
               src={showcaseImages[currentIndex].src}
               alt={showcaseImages[currentIndex].alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Overlay with caption */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <p className="text-white text-xl md:text-2xl font-semibold">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              <p className="text-white text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
                 {showcaseImages[currentIndex].caption}
               </p>
             </div>
@@ -88,7 +92,7 @@ export const ProductShowcase = () => {
               variant="ghost"
               size="icon"
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground rounded-full w-12 h-12 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground rounded-full w-12 h-12 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-card hover:scale-110"
             >
               <ChevronLeft className="w-6 h-6" />
             </Button>
@@ -96,22 +100,22 @@ export const ProductShowcase = () => {
               variant="ghost"
               size="icon"
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground rounded-full w-12 h-12 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground rounded-full w-12 h-12 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-card hover:scale-110"
             >
               <ChevronRight className="w-6 h-6" />
             </Button>
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-3 mt-8">
             {showcaseImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   currentIndex === index
-                    ? "bg-primary w-8"
-                    : "bg-muted-foreground/30"
+                    ? "bg-primary w-10"
+                    : "bg-border hover:bg-muted-foreground/50 w-2"
                 }`}
               />
             ))}
