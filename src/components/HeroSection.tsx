@@ -1,7 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 
 export const HeroSection = () => {
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToPrograms = () => {
+    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background image with overlay */}
@@ -12,8 +20,8 @@ export const HeroSection = () => {
           className="w-full h-full object-cover scale-105"
         />
         {/* Premium gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
       </div>
 
       {/* Decorative elements */}
@@ -36,10 +44,11 @@ export const HeroSection = () => {
             </h1>
 
             <p 
-              className="text-lg md:text-xl text-white/80 leading-relaxed animate-fade-up max-w-2xl mx-auto" 
+              className="text-lg md:text-xl lg:text-2xl text-white/85 leading-relaxed animate-fade-up max-w-3xl mx-auto" 
               style={{ animationDelay: "0.1s" }}
             >
-              Creating impactful learning experiences through hands-on kits, immersive AR/VR, and expert-led workshops for individuals and organizations.
+              Hands-on STEM kits, immersive AR/VR learning, and expert-led workshops 
+              for children, schools, and organizations.
             </p>
 
             {/* CTA Buttons */}
@@ -47,33 +56,54 @@ export const HeroSection = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <Button variant="hero" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group" onClick={scrollToPrograms}>
                 Explore Programs
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="heroOutline" size="xl" className="group">
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+              <Button variant="heroOutline" size="xl" className="group" onClick={scrollToContact}>
+                <Phone className="w-5 h-5 mr-2" />
+                Talk to an Expert
               </Button>
             </div>
 
             {/* Trust indicators */}
             <div 
-              className="flex flex-wrap items-center justify-center gap-8 pt-8 animate-fade-up"
+              className="flex flex-wrap items-center justify-center gap-4 md:gap-6 pt-8 animate-fade-up"
               style={{ animationDelay: "0.3s" }}
             >
+              <div className="flex items-center gap-2 text-white/80 text-sm md:text-base">
+                <CheckCircle className="w-5 h-5 text-primary" />
+                <span>CBSE-Aligned Learning</span>
+              </div>
+              <div className="hidden md:block w-px h-6 bg-white/20" />
+              <div className="flex items-center gap-2 text-white/80 text-sm md:text-base">
+                <CheckCircle className="w-5 h-5 text-primary" />
+                <span>Trusted by 500+ Schools</span>
+              </div>
+              <div className="hidden md:block w-px h-6 bg-white/20" />
+              <div className="flex items-center gap-2 text-white/80 text-sm md:text-base">
+                <CheckCircle className="w-5 h-5 text-primary" />
+                <span>Designed by Educators</span>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div 
+              className="flex flex-wrap items-center justify-center gap-8 pt-8 animate-fade-up"
+              style={{ animationDelay: "0.4s" }}
+            >
               <div className="text-center">
-                <p className="text-3xl font-bold text-white">50M+</p>
-                <p className="text-sm text-white/60">Kits Delivered</p>
+                <p className="text-3xl md:text-4xl font-bold text-white">50M+</p>
+                <p className="text-sm text-white/60">Learning Components</p>
               </div>
               <div className="w-px h-12 bg-white/20" />
               <div className="text-center">
-                <p className="text-3xl font-bold text-white">500+</p>
+                <p className="text-3xl md:text-4xl font-bold text-white">500+</p>
                 <p className="text-sm text-white/60">Partner Schools</p>
               </div>
               <div className="w-px h-12 bg-white/20" />
               <div className="text-center">
-                <p className="text-3xl font-bold text-white">4.9★</p>
+                <p className="text-3xl md:text-4xl font-bold text-white">4.9★</p>
                 <p className="text-sm text-white/60">Parent Rating</p>
               </div>
             </div>

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Send } from "lucide-react";
+import { MapPin, Send, Calendar, MessageCircle, Phone, Mail, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
@@ -57,8 +57,8 @@ export const ContactSection = () => {
       }
 
       toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
+        title: "Message sent successfully! ✓",
+        description: "Thank you for reaching out. Our team will contact you within 24 hours.",
       });
 
       reset();
@@ -78,24 +78,24 @@ export const ContactSection = () => {
       value: "parent",
       icon: "👤",
       title: "Parent",
-      description: "Looking for learning kits for my child",
+      description: "Looking for learning kits",
     },
     {
       value: "school",
       icon: "🏫",
       title: "School / Teacher",
-      description: "Interested in curriculum solutions",
+      description: "Curriculum & partnerships",
     },
     {
       value: "corporate",
       icon: "💼",
       title: "Corporate",
-      description: "Corporate gifting or partnerships",
+      description: "Gifting & team programs",
     },
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gradient-subtle relative overflow-hidden">
+    <section id="contact" className="section-padding bg-background relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
@@ -110,7 +110,7 @@ export const ContactSection = () => {
             Let's <span className="text-gradient-primary">Connect</span>
           </h2>
           <p className="section-subtitle">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions? We'd love to hear from you.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export const ContactSection = () => {
             <CardContent className="p-8 lg:p-10">
               <h3 className="text-2xl font-bold text-foreground mb-2">Send us a Message</h3>
               <p className="text-muted-foreground mb-8">
-                Fill out the form below and we'll get back to you as soon as possible.
+                Fill out the form and we'll get back to you within 24 hours.
               </p>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -185,7 +185,7 @@ export const ContactSection = () => {
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="+1 (234) 567-890"
+                    placeholder="+91 98765 43210"
                     {...register("phone")}
                     className="mt-2 h-12 rounded-xl"
                   />
@@ -241,72 +241,93 @@ export const ContactSection = () => {
             </CardContent>
           </Card>
 
-          {/* Right Column - Map and Info */}
+          {/* Right Column - Quick Actions & Info */}
           <div className="space-y-6 lg:space-y-8">
-            {/* Map Placeholder */}
-            <Card className="shadow-elevated border-0 overflow-hidden hover-lift">
-              <div className="relative h-64 bg-gradient-subtle flex items-center justify-center">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary text-primary-foreground mb-3 shadow-card">
-                    <MapPin className="h-8 w-8" />
+            {/* Book Consultation CTA */}
+            <Card className="shadow-elevated border-0 bg-primary text-primary-foreground overflow-hidden">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                    <Calendar className="w-7 h-7" />
                   </div>
-                  <p className="text-sm text-muted-foreground">Interactive map coming soon</p>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Book a Free Consultation</h3>
+                    <p className="text-primary-foreground/80 text-sm mb-4">
+                      Schedule a 30-minute call with our STEM education experts to discuss your needs.
+                    </p>
+                    <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                      Schedule Now
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              <CardContent className="p-6 lg:p-8 bg-card">
-                <h3 className="font-bold text-xl mb-2">SparrowG Headquarters</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  T-WORKS FOUNDATION, Plot 1/D, 1/E, 1/F, Survey No. 83/1, Raidurgam<br />
-                  Hyderabad 500081, India
-                </p>
               </CardContent>
             </Card>
 
-            {/* Office Hours */}
+            {/* WhatsApp Quick Contact */}
+            <Card className="shadow-elevated border-0 bg-[#25D366]/10 overflow-hidden hover-lift">
+              <CardContent className="p-6">
+                <a 
+                  href="https://wa.me/919493017356" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Chat on WhatsApp</h4>
+                    <p className="text-sm text-muted-foreground">Get instant response during business hours</p>
+                  </div>
+                </a>
+              </CardContent>
+            </Card>
+
+            {/* Contact Details */}
             <Card className="shadow-elevated border-0 hover-lift">
               <CardContent className="p-6 lg:p-8">
-                <h3 className="font-bold text-xl mb-6">Office Hours</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-2 border-b border-border">
-                    <span className="text-muted-foreground">Monday - Friday</span>
-                    <span className="font-semibold">10:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-muted-foreground">Saturday</span>
-                    <span className="font-semibold">10:00 AM - 4:00 PM</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Need Immediate Help */}
-            <Card className="shadow-elevated border-0 bg-accent hover-lift">
-              <CardContent className="p-6 lg:p-8">
-                <h3 className="font-bold text-xl mb-3">Need Immediate Help?</h3>
-                <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
-                  Check out our FAQ section below or browse our help center for instant answers.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-xl bg-card flex items-center justify-center">
-                      📧
-                    </span>
+                <h3 className="font-bold text-xl mb-6">Contact Information</h3>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-primary" />
+                    </div>
                     <div>
-                      <span className="text-xs text-muted-foreground">Email</span>
-                      <a href="mailto:support@sparrowg.com" className="block text-primary font-semibold hover:underline">
-                        support@sparrowg.com
-                      </a>
+                      <p className="font-semibold">SparrowG Headquarters</p>
+                      <p className="text-sm text-muted-foreground">
+                        T-WORKS FOUNDATION, Plot 1/D, 1/E, 1/F<br />
+                        Raidurgam, Hyderabad 500081, India
+                      </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-xl bg-card flex items-center justify-center">
-                      📞
-                    </span>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-primary" />
+                    </div>
                     <div>
-                      <span className="text-xs text-muted-foreground">Phone</span>
-                      <a href="tel:9493017356" className="block text-primary font-semibold hover:underline">
-                        +91 9493017356
-                      </a>
+                      <p className="font-semibold">+91 9493017356</p>
+                      <p className="text-sm text-muted-foreground">Mon-Sat, 10 AM - 6 PM IST</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">support@sparrowg.com</p>
+                      <p className="text-sm text-muted-foreground">We reply within 24 hours</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Office Hours</p>
+                      <p className="text-sm text-muted-foreground">Mon-Fri: 10 AM - 6 PM | Sat: 10 AM - 4 PM</p>
                     </div>
                   </div>
                 </div>

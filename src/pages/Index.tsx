@@ -1,12 +1,14 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
+import { AudienceSegmentation } from "@/components/AudienceSegmentation";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { ServicesSlider } from "@/components/ServicesSlider";
 import { WhySparrowG } from "@/components/WhySparrowG";
-import { TargetAudience } from "@/components/TargetAudience";
+import { TrustSection } from "@/components/TrustSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
-import { FutureVision } from "@/components/FutureVision";
 import { FeaturedProducts } from "@/components/FeaturedProducts";
+import { AboutSection } from "@/components/AboutSection";
+import { FutureVision } from "@/components/FutureVision";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -16,13 +18,15 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <AudienceSegmentation />
         <ProductShowcase />
         <ServicesSlider />
         <WhySparrowG />
-        <TargetAudience />
+        <TrustSection />
         <ReviewsSection />
-        <FutureVision />
         <FeaturedProducts />
+        <AboutSection />
+        <FutureVision />
         <ContactSection />
       </main>
       <Footer />
