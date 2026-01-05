@@ -68,7 +68,7 @@ export const HeroSection = () => {
               <div className="hidden md:block w-px h-6 bg-white/20" />
               <div className="flex items-center gap-2 text-white/80 text-sm md:text-base">
                 <CheckCircle className="w-5 h-5 text-primary" />
-                <span>Trusted by 500+ Schools</span>
+                <span>Trusted by  Schools</span>
               </div>
               <div className="hidden md:block w-px h-6 bg-white/20" />
               <div className="flex items-center gap-2 text-white/80 text-sm md:text-base">
