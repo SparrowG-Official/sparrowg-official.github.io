@@ -35,39 +35,46 @@ const audiences = [
 
 export const TargetAudience = () => {
   return (
-    <section className="py-24 bg-gradient-subtle">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="section-padding bg-gradient-subtle relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-20 right-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <p className="text-sm font-semibold text-secondary uppercase tracking-widest mb-4">
+            Our Community
+          </p>
+          <h2 className="section-title mb-6">
             Who We <span className="text-gradient-warm">Serve</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-subtitle">
             Tailored solutions for every stakeholder in education
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {audiences.map((audience, index) => {
             const IconComponent = audience.icon;
             return (
               <Card
                 key={index}
                 variant="elevated"
-                className="group"
+                className="group hover-lift"
               >
-                <CardContent className="p-8">
+                <CardContent className="p-8 lg:p-10">
                   <div className="flex items-start gap-6">
-                    <div className={`w-14 h-14 rounded-2xl ${audience.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className="w-7 h-7" />
+                    <div className={`w-16 h-16 lg:w-20 lg:h-20 rounded-2xl ${audience.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300`}>
+                      <IconComponent className="w-8 h-8 lg:w-10 lg:h-10" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">{audience.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold mb-3">{audience.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed mb-5 text-base">
                         {audience.description}
                       </p>
                       <Button variant="link" className="p-0 h-auto text-primary font-semibold group/btn">
                         {audience.cta}
-                        <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
                     </div>
                   </div>
