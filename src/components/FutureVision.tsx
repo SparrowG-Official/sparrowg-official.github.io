@@ -1,27 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, Pencil, Shirt, Users } from "lucide-react";
+import futureCurriculum from "@/assets/future-curriculum.png";
+import futureArvr from "@/assets/future-arvr.png";
+import futureEcosystem from "@/assets/future-ecosystem.png";
+import futureCommunity from "@/assets/future-community.png";
 
 const visions = [
   {
-    icon: BookOpen,
+    image: futureCurriculum,
     title: "Curriculum Programs",
     description: "Integrated STEM curricula for schools and educational institutions",
     status: "Coming Soon",
   },
   {
-    icon: Pencil,
-    title: "AR/VR Learning",
+    image: futureArvr,
+    title: "AR/VR Experiences",
     description: "Immersive augmented and virtual reality experiences for interactive STEM education",
     status: "In Development",
   },
   {
-    icon: Shirt,
+    image: futureEcosystem,
     title: "Tech Ecosystem",
     description: "A platform connecting students, educators, and parents for collaborative learning",
     status: "Coming Soon",
   },
   {
-    icon: Users,
+    image: futureCommunity,
     title: "Learning Communities",
     description: "Connect with fellow STEM enthusiasts and educators worldwide",
     status: "Coming Soon",
@@ -53,25 +56,32 @@ export const FutureVision = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {visions.map((vision, index) => {
-            const IconComponent = vision.icon;
-            return (
-              <Card key={index} variant="glass" className="group hover-lift">
-                <CardContent className="p-8 lg:p-10 text-center">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <IconComponent className="w-8 h-8 lg:w-10 lg:h-10 text-accent-foreground" />
-                  </div>
-                  <span className="inline-block px-4 py-1.5 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-4">
+          {visions.map((vision, index) => (
+            <Card key={index} variant="glass" className="group hover-lift overflow-hidden">
+              <CardContent className="p-0">
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={vision.image} 
+                    alt={vision.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <span className="absolute bottom-3 left-3 inline-block px-3 py-1 text-xs font-semibold bg-primary/90 text-primary-foreground rounded-full">
                     {vision.status}
                   </span>
-                  <h3 className="text-lg lg:text-xl font-bold mb-3">{vision.title}</h3>
+                </div>
+                
+                {/* Content */}
+                <div className="p-6 text-center">
+                  <h3 className="text-lg lg:text-xl font-bold mb-2">{vision.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {vision.description}
                   </p>
-                </CardContent>
-              </Card>
-            );
-          })}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

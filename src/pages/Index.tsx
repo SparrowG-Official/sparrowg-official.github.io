@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AudienceSegmentation } from "@/components/AudienceSegmentation";
 import { ProductShowcase } from "@/components/ProductShowcase";
-import { ServicesSlider } from "@/components/ServicesSlider";
+import { ServicesCarousel } from "@/components/ServicesCarousel";
 import { WhySparrowG } from "@/components/WhySparrowG";
 import { TrustSection } from "@/components/TrustSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -20,7 +20,7 @@ const Index = () => {
         <HeroSection />
         <AudienceSegmentation />
         <ProductShowcase />
-        <ServicesSlider />
+        <ServicesCarousel />
         <WhySparrowG />
         <TrustSection />
         <ReviewsSection />
