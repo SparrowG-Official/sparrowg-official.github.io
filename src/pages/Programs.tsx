@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Box, Glasses, Users, Gift } from "lucide-react";
+import { Box, Glasses, Users, Gift, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ProgramCard } from "@/components/ProgramCard";
 import { EnrollmentModal } from "@/components/EnrollmentModal";
+import { Button } from "@/components/ui/button";
 
 const programs = [
   {
@@ -287,8 +289,16 @@ const Programs = () => {
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="pt-32 pb-16 bg-gradient-hero">
-          <div className="container mx-auto px-4 lg:px-8">
+        <section className="pt-32 pb-16 bg-gradient-subtle relative overflow-hidden">
+          <div className="absolute inset-0 stem-pattern pointer-events-none" />
+          <div className="absolute top-20 left-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-10 right-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="container mx-auto px-4 lg:px-8 relative z-10">
+            <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Home
+            </Link>
             <div className="text-center max-w-3xl mx-auto">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
                 Our Programs
@@ -321,22 +331,24 @@ const Programs = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-subtle">
-          <div className="container mx-auto px-4 lg:px-8">
+        <section className="section-padding bg-gradient-subtle relative overflow-hidden">
+          <div className="absolute inset-0 stem-pattern pointer-events-none" />
+          <div className="absolute top-10 right-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Not Sure Which Program Fits?
+                Not Sure Which Program <span className="text-gradient-primary">Fits?</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 Our education consultants can help you choose the perfect STEM journey
                 based on your goals, age group, and requirements.
               </p>
-              <a
-                href="/#contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold hover:opacity-90 transition-opacity"
-              >
-                Book a Free Consultation
-              </a>
+              <Link to="/#contact">
+                <Button size="lg" className="shadow-soft">
+                  Book a Free Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
