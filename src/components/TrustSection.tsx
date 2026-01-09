@@ -29,11 +29,11 @@ const stats = [
 ];
 
 const partners = [
-  { name: "CBSE", logo: "🏫" },
-  { name: "ICSE", logo: "📚" },
+  { name: "CBSE", logo: "🏫", image: "/partner-logos/CBSE_logo.png" },
+  { name: "ICSE", logo: "📚", image: "/partner-logos/CISCE_logo.png" },
   { name: "State Boards", logo: "🎓" },
-  { name: "IIT Alumni", logo: "🔬" },
-  { name: "T-Works", logo: "🏭" },
+  { name: "IIT Alumni", logo: "🔬", image: "/partner-logos/IITALUMNI_logo.png" },
+  { name: "T-Works", logo: "🏭", image: "/partner-logos/TWORKS_logo.jpg" },
   { name: "EdTech Partners", logo: "💡" },
 ];
 
@@ -66,14 +66,11 @@ export const TrustSection = () => {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Stats */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
-            Our Impact
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-8">
+            Trusted by Schools & Partners
           </p>
-          <h2 className="section-title mb-6">
-            Trusted by <span className="text-gradient-primary">Educators</span> Nationwide
-          </h2>
         </div>
 
         {/* Stats Cards - Commented Out */}
@@ -99,16 +96,23 @@ export const TrustSection = () => {
 
         {/* Partner Logos */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-8">
-            Trusted by Schools & Partners
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-10">
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity duration-300"
+                className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300"
               >
-                <span className="text-4xl">{partner.logo}</span>
+                {partner.image ? (
+                  <div className="h-16 w-24 flex items-center justify-center">
+                    <img
+                      src={partner.image}
+                      alt={partner.name}
+                      className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                ) : (
+                  <span className="text-4xl">{partner.logo}</span>
+                )}
                 <span className="text-xs font-medium text-muted-foreground">{partner.name}</span>
               </div>
             ))}
