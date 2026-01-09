@@ -22,9 +22,9 @@ type GridItem = {
 const gridItems: GridItem[] = [
   {
     type: "review",
-    name: "Sarah Johnson",
+    name: "Riya Sharma, Mumbai",
     rating: 5,
-    text: "My kids absolutely loved their STEM kit! The experiments were fun and educational.",
+    text: "My daughter absolutely loves the crane kit! She is learning engineering concepts while having fun at home.",
     rowSpan: 1,
     colSpan: 1,
   },
@@ -44,9 +44,9 @@ const gridItems: GridItem[] = [
   },
   {
     type: "review",
-    name: "Michael Chen",
+    name: "Aarav Mehta, Delhi",
     rating: 5,
-    text: "KitsCrate has been amazing for our classroom. Students are so engaged!",
+    text: "The dump truck kit made learning mechanics so easy and engaging for my son. Highly recommend!",
     rowSpan: 1,
     colSpan: 1,
   },
@@ -59,9 +59,9 @@ const gridItems: GridItem[] = [
   },
   {
     type: "review",
-    name: "Emily Rodriguez",
+    name: "Sneha Kapoor, Bengaluru",
     rating: 5,
-    text: "Best STEM learning experience! My daughter is now obsessed with science experiments.",
+    text: "The concept-driven kits keep my child curious and excited every day. Hands-on learning works wonders!",
     rowSpan: 1,
     colSpan: 1,
   },
@@ -74,9 +74,17 @@ const gridItems: GridItem[] = [
   },
   {
     type: "review",
-    name: "David Thompson",
+    name: "Karan Singh, Hyderabad",
     rating: 5,
-    text: "Fantastic kits! My son learned so much about physics and engineering.",
+    text: "The Fork Lifter kit is fantastic! My kids are learning design and problem-solving in a playful way.",
+    rowSpan: 1,
+    colSpan: 1,
+  },
+  {
+    type: "review",
+    name: "Ananya Joshi, Pune",
+    rating: 5,
+    text: "I love how these kits encourage parent-child bonding while teaching real STEM skills. Very happy!",
     rowSpan: 1,
     colSpan: 1,
   },
@@ -85,7 +93,7 @@ const gridItems: GridItem[] = [
     image: "/reviews/img004.jpg",
     alt: "STEM workshop activity",
     rowSpan: 1,
-    colSpan: 2,
+    colSpan: 1,
   }
 ];
 
@@ -112,11 +120,8 @@ export const ReviewsSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Over <span className="text-gradient-primary">50 million</span> kits
+            Real Experiences. <span className="text-gradient-primary">Happy Learners.</span>
           </h2>
-          <p className="text-2xl md:text-3xl font-semibold text-muted-foreground">
-            delivered worldwide!
-          </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
             Check out what parents are saying and see the excitement we bring to learning!
           </p>

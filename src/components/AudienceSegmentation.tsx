@@ -56,7 +56,7 @@ export const AudienceSegmentation = () => {
             Find Your Path
           </p>
           <h2 className="section-title mb-6">
-            Who Are You <span className="text-gradient-primary">Learning For</span>?
+            Built for <span className="text-gradient-primary">Every Learner</span>
           </h2>
           <p className="section-subtitle">
             Tailored STEM solutions for every learner and organization

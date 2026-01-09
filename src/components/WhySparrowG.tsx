@@ -44,7 +44,7 @@ export const WhySparrowG = () => {
             Why <span className="text-gradient-primary">SparrowG</span>?
           </h2>
           <p className="section-subtitle">
-            We're committed to making STEM education accessible, engaging, and impactful
+            We're committed to making STEM education Accessible. Engaging. Impactful.
           </p>
         </div>
 

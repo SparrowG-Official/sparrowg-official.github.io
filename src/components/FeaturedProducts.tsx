@@ -6,61 +6,42 @@ import { useState } from "react";
 const products = [
   {
     id: 1,
-    name: "Robotics Starter Kit",
+    name: "Crane",
     image: "/images/C0813T01.JPG",
     price: "₹2,499",
     originalPrice: "₹3,199",
     discount: "-22%",
     ageGroup: "8-14 years",
-    skills: ["Programming", "Engineering", "Problem Solving"],
-    includes: "50+ components, Arduino board, Sensors",
-    rating: 4.9,
-    reviews: 234,
+    skills: ["Coding", "Engineering", "Analytical Thinking"],
+    includes: "200+ components. Arduino board, sensors",
   },
   {
     id: 2,
-    name: "Electronics Discovery Set",
+    name: "Dump Truck",
     image: "/images/C0872T01.JPG",
     price: "₹1,799",
     originalPrice: "₹2,299",
     discount: "-22%",
     ageGroup: "10-16 years",
-    skills: ["Circuits", "Physics", "Creativity"],
-    includes: "100+ components, LED displays, Breadboards",
-    rating: 4.8,
-    reviews: 189,
+    skills: ["Mechanics", "Design Thinking", "Innovation"],
+    includes: "200+ components. Arduino board, sensors",
   },
   {
     id: 3,
-    name: "Science Explorer Bundle",
+    name: "Fork Lifter",
     image: "/images/C0886T01.JPG",
     price: "₹1,299",
     originalPrice: "₹1,699",
     discount: "-24%",
     ageGroup: "6-12 years",
-    skills: ["Chemistry", "Biology", "Observation"],
-    includes: "25 experiments, Safety gear, Lab notebook",
-    rating: 4.9,
-    reviews: 312,
-  },
-  {
-    id: 4,
-    name: "DIY Engineering Kit",
-    image: "/images/DSC00840.JPG",
-    price: "₹999",
-    originalPrice: "₹1,299",
-    discount: "-23%",
-    ageGroup: "5-10 years",
-    skills: ["Construction", "Mechanics", "Design"],
-    includes: "Building blocks, Gears, Instruction cards",
-    rating: 4.7,
-    reviews: 156,
+    skills: ["Construction", "Creativity", "Collaboration"],
+    includes: "200+ components. Arduino board, sensors",
   },
 ];
 
 export const FeaturedProducts = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const visibleCount = 4;
+  const visibleCount = 3;
 
   const nextSlide = () => {
     setStartIndex((prev) =>
@@ -133,7 +114,7 @@ export const FeaturedProducts = () => {
             </>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {visibleProducts.map((product) => (
               <Card
                 key={product.id}
@@ -161,15 +142,6 @@ export const FeaturedProducts = () => {
                 </div>
 
                 <CardContent className="p-5 lg:p-6">
-                  {/* Rating */}
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-semibold">{product.rating}</span>
-                    </div>
-                    <span className="text-xs text-muted-foreground">({product.reviews} reviews)</span>
-                  </div>
-
                   <h3 className="text-base lg:text-lg font-bold text-foreground mb-2 line-clamp-2">
                     {product.name}
                   </h3>

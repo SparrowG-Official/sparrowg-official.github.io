@@ -6,22 +6,22 @@ const showcaseImages = [
   {
     src: "/images/C0813T01.JPG",
     alt: "Building construction models",
-    caption: "Build. Learn. Innovate.",
+    caption: "Large Scale Models",
   },
   {
     src: "/images/C0872T01.JPG",
     alt: "Interactive STEM learning session",
-    caption: "Interactive Learning Experiences",
+    caption: "Coding Enabled Kits",
   },
   {
     src: "/images/C0886T01.JPG",
     alt: "Team working on engineering kit",
-    caption: "Collaborative Problem Solving",
+    caption: "Parent Child Bonding",
   },
   {
     src: "/images/DSC00840.JPG",
     alt: "Creative STEM projects",
-    caption: "Bringing Ideas to Life",
+    caption: "Concept Driven Kits",
   },
 ];
 
@@ -63,10 +63,10 @@ export const ProductShowcase = () => {
             Real Learning in Action
           </p>
           <h2 className="section-title mb-6">
-            Our <span className="text-gradient-primary">Kits</span> in Action
+            The <span className="text-gradient-primary">Learning Experiences</span>
           </h2>
           <p className="section-subtitle">
-            See how students engage with hands-on STEM learning through our innovative kits and workshops
+            See students explore, build, and learn with our hands-on STEM kits
           </p>
         </div>
 

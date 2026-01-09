@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Bird } from "lucide-react";
+import { Menu, X, Bird, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -112,7 +112,8 @@ export const Navbar = () => {
                 size="default"
                 className="shadow-soft"
               >
-                Explore Programs
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                Shop
               </Button>
             </Link>
           </div>
@@ -153,7 +154,8 @@ export const Navbar = () => {
               ))}
               <Link to="/programs" onClick={() => setIsOpen(false)}>
                 <Button variant="default" size="lg" className="mt-4 w-full">
-                  Explore Programs
+                  <ShoppingCart className="w-4 h-4 mr-2" />
+                  Shop
                 </Button>
               </Link>
             </div>

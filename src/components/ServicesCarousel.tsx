@@ -24,7 +24,7 @@ const services = [
     color: "bg-science/10 text-science",
     gradient: "from-science/20 to-science/5",
     audience: ["Parents", "Schools"],
-    features: ["Age 5-16 range", "100+ components", "Video guides", "Safe materials"],
+    features: ["Age 7-15 range", "100+ components", "Video guides", "Safe materials"],
     highlights: ["Build robots", "Create circuits", "Science experiments"],
   },
   {

@@ -73,7 +73,7 @@ export const TrustSection = () => {
           </p>
         </div>
 
-        {/* Stats Cards - Commented Out */}
+        {/* Stats Cards*/}
         {/*
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20 max-w-5xl mx-auto">
           {stats.map((stat, index) => {
@@ -95,19 +95,19 @@ export const TrustSection = () => {
         */}
 
         {/* Partner Logos */}
-        <div className="text-center mb-16">
-          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+        <div className="text-center mb-2">
+          <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300"
+                className="flex flex-col items-center gap-3 opacity-100 transition-opacity duration-300\"
               >
                 {partner.image ? (
                   <div className="h-16 w-24 flex items-center justify-center">
                     <img
                       src={partner.image}
                       alt={partner.name}
-                      className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      className="max-h-full max-w-full object-contain transition-all duration-300"
                     />
                   </div>
                 ) : (
@@ -119,7 +119,7 @@ export const TrustSection = () => {
           </div>
         </div>
 
-        {/* Case Studies - Commented Out */}
+        {/* Case Studies*/}
         {/*
         <div className="max-w-5xl mx-auto">
           <h3 className="text-xl font-bold text-center mb-8">Success Stories</h3>

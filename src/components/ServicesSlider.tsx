@@ -7,19 +7,19 @@ const services = [
     id: 1,
     title: "STEM Kits",
     subtitle: "Hands-on learning that sparks curiosity",
-    description: "Transform abstract concepts into tangible experiences with cutting-edge STEM kits designed for ages 5-16.",
+    description: "Transform abstract concepts into tangible experiences with cutting-edge STEM kits designed for ages 7-15.",
     icon: Box,
     color: "bg-science/10 text-science",
     gradient: "from-science/20 to-science/5",
     audience: ["Parents", "Schools"],
-    features: ["Age 5-16 range", "100+ components", "Video guides", "Safe materials"],
+    features: ["Age 7-15 years", "200+ components", "Video guides", "Safe materials"],
     highlights: ["Build robots", "Create circuits", "Science experiments"],
   },
   {
     id: 2,
     title: "AR/VR Learning",
     subtitle: "Immersive education beyond textbooks",
-    description: "Transform abstract concepts into tangible experiences with cutting-edge AR/VR technology.",
+    description: "Transform abstract concepts into multi-dimensional experiences with cutting-edge AR/VR solutions. Explore one-of-its-kind metaverse of learning.",
     icon: Glasses,
     color: "bg-technology/10 text-technology",
     gradient: "from-technology/20 to-technology/5",
@@ -43,7 +43,7 @@ const services = [
     id: 4,
     title: "Corporate Gifting",
     subtitle: "Educational branded gifting solutions",
-    description: "Unique STEM-themed gifts that educate and inspire. Perfect for employee engagement, client gifts, and CSR initiatives.",
+    description: "Unique STEM-themed gifts for employee engagement, client appreciation, and CSR initiatives",
     icon: Gift,
     color: "bg-mathematics/10 text-mathematics",
     gradient: "from-mathematics/20 to-mathematics/5",
@@ -67,7 +67,7 @@ export const ServicesSection = () => {
             What We Offer
           </p>
           <h2 className="section-title mb-6">
-            Our <span className="text-gradient-primary">Services</span>
+            Our <span className="text-gradient-primary">Products</span>
           </h2>
           <p className="section-subtitle">
             Comprehensive STEM solutions designed for maximum learning impact
