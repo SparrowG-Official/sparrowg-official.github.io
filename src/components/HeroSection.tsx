@@ -22,7 +22,7 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex items-center justify-center min-h-[85vh]">
           {/* Centered Content - positioned lower */}
-          <div className="space-y-8 text-center max-w-6xl mt-40 md:mt-48">
+          <div className="space-y-8 text-center max-w-6xl mt-64 md:mt-80 lg:mt-96">
             {/* Modern Hero Title - Single line with LEARN in primary color */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight animate-fade-up tracking-tighter">
               <span className="text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{
@@ -30,7 +30,7 @@ export const HeroSection = () => {
               }}>
                 BUILD. PLAY.{" "}
               </span>
-              <span className="text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{
+              <span className="text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{
                 textShadow: '2px 2px 0 rgba(0,0,0,0.3), 4px 4px 8px rgba(0,0,0,0.5)'
               }}>
                 LEARN.
