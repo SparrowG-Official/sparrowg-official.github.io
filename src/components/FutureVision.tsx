@@ -85,7 +85,7 @@ export const FutureVision = () => {
         </div>
 
         {/* 3D Carousel */}
-        <div className="relative h-[380px] lg:h-[340px] flex items-center justify-center">
+        <div className="relative h-[380px] lg:h-[500px] w-full max-w-[340px] lg:max-w-[580px] mx-auto flex items-center justify-center">
           {visions.map((vision, index) => {
             const position = getSlidePosition(index);
             const isActive = position === 0;
@@ -116,13 +116,13 @@ export const FutureVision = () => {
               >
                 <Card
                   variant="glass"
-                  className={`w-[320px] lg:w-[480px] overflow-hidden transition-shadow duration-500 ${
+                  className={`w-[380px] lg:w-[580px] overflow-hidden transition-shadow duration-500 ${
                     isActive ? 'shadow-2xl' : 'shadow-lg'
                   }`}
                 >
                   <CardContent className="p-0">
                     {/* Image */}
-                    <div className="relative h-44 lg:h-52 overflow-hidden bg-gradient-to-br from-muted/30 to-muted/10">
+                    <div className="relative h-56 lg:h-64 overflow-hidden bg-gradient-to-br from-muted/30 to-muted/10">
                       <img 
                         src={vision.image} 
                         alt={vision.title}

@@ -68,9 +68,9 @@ export const TrustSection = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-8">
-            Trusted by Schools & Partners
-          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+            Trusted by <span className="text-gradient-primary">Schools & Partners</span>
+          </h2>
         </div>
 
         {/* Stats Cards*/}

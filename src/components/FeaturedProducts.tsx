@@ -118,11 +118,6 @@ export const FeaturedProducts = () => {
                 className="group overflow-hidden hover-lift bg-card"
               >
                 <div className="relative aspect-square overflow-hidden bg-muted">
-                  {/* Discount Badge */}
-                  <div className="absolute top-4 left-4 z-10 bg-destructive text-destructive-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-                    {product.discount}
-                  </div>
-
                   {/* Age Badge */}
                   <div className="absolute top-4 right-4 z-10 bg-card/90 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">
                     {product.ageGroup}

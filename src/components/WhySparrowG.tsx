@@ -43,7 +43,7 @@ export const WhySparrowG = () => {
           <h2 className="section-title mb-6">
             Why <span className="text-gradient-primary">SparrowG</span>?
           </h2>
-          <p className="section-subtitle text-justify">
+          <p className="section-subtitle">
             We're committed to making STEM education Accessible. Engaging. Impactful.
           </p>
         </div>

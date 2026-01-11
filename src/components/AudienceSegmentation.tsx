@@ -55,7 +55,7 @@ export const AudienceSegmentation = () => {
           <h2 className="section-title mb-6">
             Built for <span className="text-gradient-primary">Every Learner</span>
           </h2>
-          <p className="section-subtitle text-justify">
+          <p className="section-subtitle">
             Tailored STEM solutions for every learner and organization
           </p>
         </div>

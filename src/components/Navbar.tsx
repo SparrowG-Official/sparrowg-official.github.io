@@ -106,16 +106,15 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link to="/programs">
-              <Button 
-                variant={isScrolled || !isHomePage ? "default" : "hero"} 
-                size="default"
-                className="shadow-soft"
-              >
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Shop
-              </Button>
-            </Link>
+            <Button 
+              variant={isScrolled || !isHomePage ? "default" : "hero"} 
+              size="default"
+              className="shadow-soft cursor-not-allowed opacity-50"
+              disabled
+            >
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              Shop
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
