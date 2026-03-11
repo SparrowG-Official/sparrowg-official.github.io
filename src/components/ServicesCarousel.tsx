@@ -205,12 +205,16 @@ export const ServicesCarousel = () => {
                             </div>
 
                             {/* Learn More Button */}
-                            <Link to="/programs">
-                              <Button variant="outline" className="group/btn hover-lift w-full">
-                                Learn More
-                                <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                              </Button>
-                            </Link>
+                            <Button 
+                              variant="outline" 
+                              className="group/btn hover-lift w-full"
+                              onClick={() => {
+                                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                              }}
+                            >
+                              Contact Us
+                              <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                            </Button>
                           </>
                         )}
                       </div>

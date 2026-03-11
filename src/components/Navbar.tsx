@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Programs", href: "/programs" },
   { name: "Services", href: "/#services" },
   { name: "About", href: "/#about" },
   { name: "Contact", href: "/#contact" },
@@ -151,12 +150,10 @@ export const Navbar = () => {
                   </Link>
                 )
               ))}
-              <Link to="/programs" onClick={() => setIsOpen(false)}>
-                <Button variant="default" size="lg" className="mt-4 w-full">
-                  <ShoppingCart className="w-4 h-4 mr-2" />
-                  Shop
-                </Button>
-              </Link>
+              <Button variant="default" size="lg" className="mt-4 w-full opacity-50 cursor-not-allowed" disabled>
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                Shop
+              </Button>
             </div>
           </div>
         )}

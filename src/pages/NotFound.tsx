@@ -76,7 +76,6 @@ const NotFound = () => {
                 <p className="text-sm text-muted-foreground mb-4">You might be looking for:</p>
                 <div className="flex flex-wrap justify-center gap-4">
                   {[
-                    { label: "Programs", href: "/programs" },
                     { label: "About Us", href: "/#about" },
                     { label: "Contact", href: "/#contact" },
                   ].map((link) => (
