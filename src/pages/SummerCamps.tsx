@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Check, Phone, Mail, Calendar, Clock, GraduationCap, IndianRupee } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -96,8 +95,10 @@ const camps = [
   },
 ];
 
+const ENQUIRY_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScVFP45idHNYQuHdowOg4Raa4tIDUT7TvGrdpHtVG64e44ncA/viewform";
+
 const SummerCamps = () => {
-  const [inquiryProgram, setInquiryProgram] = useState<string | null>(null);
 
   return (
     <>
@@ -251,13 +252,11 @@ const SummerCamps = () => {
                       </div>
                     </div>
 
-                    <Button
-                      size="lg"
-                      className="w-full sm:w-auto shadow-soft"
-                      onClick={() => setInquiryProgram(camp.title)}
-                    >
-                      Enquire Now
-                    </Button>
+                    <a href={ENQUIRY_FORM_URL} target="_blank" rel="noopener noreferrer">
+                      <Button size="lg" className="w-full sm:w-auto shadow-soft">
+                        Enquire Now
+                      </Button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -322,40 +321,6 @@ const SummerCamps = () => {
 
       <Footer />
 
-      {/* Simple inquiry confirmation toast-style overlay */}
-      {inquiryProgram && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-card rounded-2xl shadow-elevated border border-border/50 p-8 max-w-md w-full text-center animate-fade-in">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Check className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Interested in {inquiryProgram}?</h3>
-            <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              Please call or WhatsApp us at{" "}
-              <span className="font-semibold text-foreground">+91 90008 88358</span> or
-              email{" "}
-              <span className="font-semibold text-foreground">hello@sparrowg.in</span>{" "}
-              to complete your registration.
-            </p>
-            <div className="flex gap-3">
-              <a href="tel:+919000888358" className="flex-1">
-                <Button className="w-full" size="lg">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
-                </Button>
-              </a>
-              <Button
-                variant="outline"
-                size="lg"
-                className="flex-1"
-                onClick={() => setInquiryProgram(null)}
-              >
-                Close
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };
