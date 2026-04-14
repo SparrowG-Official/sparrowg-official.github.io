@@ -283,7 +283,7 @@ const SummerCamps = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
                 <a
-                  href="tel:+919000888358"
+                  href="tel:+919493017356"
                   className="flex items-center gap-3 bg-card border border-border rounded-xl px-6 py-4 shadow-soft hover:shadow-card transition-shadow hover-lift"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -291,12 +291,13 @@ const SummerCamps = () => {
                   </div>
                   <div className="text-left">
                     <p className="text-xs text-muted-foreground font-medium">Call Us</p>
-                    <p className="font-semibold text-foreground">+91 90008 88358</p>
+                    <p className="font-semibold text-foreground">+91 94930 17356</p>
+                    <p className="font-semibold text-foreground">+91 73309 95365</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:hello@sparrowg.in"
+                  href="mailto:support@sparrowg.com"
                   className="flex items-center gap-3 bg-card border border-border rounded-xl px-6 py-4 shadow-soft hover:shadow-card transition-shadow hover-lift"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -304,7 +305,7 @@ const SummerCamps = () => {
                   </div>
                   <div className="text-left">
                     <p className="text-xs text-muted-foreground font-medium">Email Us</p>
-                    <p className="font-semibold text-foreground">hello@sparrowg.in</p>
+                    <p className="font-semibold text-foreground">support@sparrowg.com</p>
                   </div>
                 </a>
               </div>
